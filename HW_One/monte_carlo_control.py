@@ -2,18 +2,6 @@ import gym
 import numpy as np
 
 
-def epsilon_soft_policy(Q, state_id, nA, epsilon=0.1):
-    randm_num = np.random.rand()
-    Q_buf = Q[state_id][:]
-
-    if randm_num > epsilon:
-        action = np.argmax(Q_buf)
-    else:
-        action = np.random.randint(nA)
-
-    return action
-
-
 def monte_carlo(env, gamma=0.95, epsilon=0.1, num_episodes=5000):
 
     # initialize
@@ -36,10 +24,9 @@ def monte_carlo(env, gamma=0.95, epsilon=0.1, num_episodes=5000):
         while not done:
             # epsilon-soft
             randm_num = np.random.rand()
-            Q_buf = Q[state_id][:]
 
             if randm_num > epsilon:
-                action = np.argmax(Q_buf)
+                action = np.argmax(Q[state_id][:])
             else:
                 action = np.random.randint(env.nA)
 
@@ -50,8 +37,8 @@ def monte_carlo(env, gamma=0.95, epsilon=0.1, num_episodes=5000):
             reward_record = np.append(reward_record,reward*(gamma**num_step))
             state_first_visit[state_id][action] = 1
 
-            if reward != 0:
-                print("Great, found goal!")
+            # if reward != 0:
+            #     print("Great, found goal!")
 
             state_id = next_state_id
             num_step += 1

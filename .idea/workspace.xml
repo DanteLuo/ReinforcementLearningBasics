@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6aee6721-e84e-49ed-9f8e-52bcbf6fce2d" name="Default" comment="" />
+    <list default="true" id="6aee6721-e84e-49ed-9f8e-52bcbf6fce2d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW_One/Test.py" afterPath="$PROJECT_DIR$/HW_One/Test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW_One/monte_carlo_control.py" afterPath="$PROJECT_DIR$/HW_One/monte_carlo_control.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW_One/q_learning.py" afterPath="$PROJECT_DIR$/HW_One/q_learning.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,77 +16,84 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/RL$monte_carlo_control.coverage" NAME="monte_carlo_control Coverage Results" MODIFIED="1506107387295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW_One" />
     <SUITE FILE_PATH="coverage/RL$value_iteration.coverage" NAME="value_iteration Coverage Results" MODIFIED="1506107594375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW_One" />
-    <SUITE FILE_PATH="coverage/RL$Test.coverage" NAME="Test Coverage Results" MODIFIED="1506107176981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW_One" />
+    <SUITE FILE_PATH="coverage/RL$monte_carlo_control.coverage" NAME="monte_carlo_control Coverage Results" MODIFIED="1506127486295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW_One" />
+    <SUITE FILE_PATH="coverage/RL$Test.coverage" NAME="Test Coverage Results" MODIFIED="1506127590261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW_One" />
     <SUITE FILE_PATH="coverage/RL$policy_evaluation.coverage" NAME="policy_evaluation Coverage Results" MODIFIED="1506031638394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW_One/Q2" />
     <SUITE FILE_PATH="coverage/RL$HW_One.coverage" NAME="HW_One Coverage Results" MODIFIED="1506045236356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW_One" />
     <SUITE FILE_PATH="coverage/RL$policy_iteration.coverage" NAME="policy_iteration Coverage Results" MODIFIED="1506045223536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW_One" />
+    <SUITE FILE_PATH="coverage/RL$q_learning.coverage" NAME="q_learning Coverage Results" MODIFIED="1506127771141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW_One" />
     <SUITE FILE_PATH="coverage/RL$hw1.coverage" NAME="hw1 Coverage Results" MODIFIED="1506028577620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW_One" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HW_One/Test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
-              <caret line="50" column="24" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="q_learning.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HW_One/q_learning.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="46" lean-forward="true" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="policy_iteration.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HW_One/policy_iteration.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="policy_evaluation.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HW_One/Q2/policy_evaluation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="33" column="69" lean-forward="false" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="69" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="monte_carlo_control.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HW_One/monte_carlo_control.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="Test.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/HW_One/Test.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="q_learning.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/HW_One/q_learning.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="108">
+                  <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#0#10#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="policy_iteration.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/HW_One/policy_iteration.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="377">
+                  <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="31" />
+                  <folding>
+                    <element signature="e#0#10#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="policy_evaluation.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/HW_One/Q2/policy_evaluation.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="349">
+                  <caret line="33" column="69" lean-forward="false" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="69" />
+                  <folding>
+                    <element signature="e#0#18#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="monte_carlo_control.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/HW_One/monte_carlo_control.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="540">
+                  <caret line="45" column="69" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="69" />
+                  <folding>
+                    <element signature="e#0#10#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -101,7 +114,11 @@
       <find>N</find>
       <find>num_step</find>
       <find>gamma</find>
+      <find>Q_buf</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -115,10 +132,10 @@
         <option value="$PROJECT_DIR$/HW_One/hw1.py" />
         <option value="$PROJECT_DIR$/HW_One/policy_iteration.py" />
         <option value="$PROJECT_DIR$/HW_One/multiarm_bandit.py" />
-        <option value="$PROJECT_DIR$/HW_One/Test.py" />
-        <option value="$PROJECT_DIR$/HW_One/monte_carlo_control.py" />
         <option value="$PROJECT_DIR$/HW_One/value_iteration.py" />
         <option value="$PROJECT_DIR$/HW_One/Q_learning.py" />
+        <option value="$PROJECT_DIR$/HW_One/Test.py" />
+        <option value="$PROJECT_DIR$/HW_One/monte_carlo_control.py" />
         <option value="$PROJECT_DIR$/HW_One/q_learning.py" />
       </list>
     </option>
@@ -130,11 +147,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1856" />
+    <option name="x" value="1984" />
     <option name="y" value="-11" />
     <option name="width" value="1857" />
     <option name="height" value="1092" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -200,7 +218,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.value_iteration">
+  <component name="RunManager" selected="Python.q_learning">
     <configuration name="HW_One" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -233,24 +251,6 @@
       <module name="RL" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW_One/Test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="hw1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HW_One" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RL" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW_One/hw1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -309,6 +309,24 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="q_learning" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HW_One" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RL" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW_One/q_learning.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="value_iteration" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -329,20 +347,20 @@
     </configuration>
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.HW_One" />
-      <item index="1" class="java.lang.String" itemvalue="Python.hw1" />
-      <item index="2" class="java.lang.String" itemvalue="Python.policy_evaluation" />
-      <item index="3" class="java.lang.String" itemvalue="Python.value_iteration" />
-      <item index="4" class="java.lang.String" itemvalue="Python.policy_iteration" />
-      <item index="5" class="java.lang.String" itemvalue="Python.Test" />
-      <item index="6" class="java.lang.String" itemvalue="Python.monte_carlo_control" />
+      <item index="1" class="java.lang.String" itemvalue="Python.policy_evaluation" />
+      <item index="2" class="java.lang.String" itemvalue="Python.value_iteration" />
+      <item index="3" class="java.lang.String" itemvalue="Python.policy_iteration" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Test" />
+      <item index="5" class="java.lang.String" itemvalue="Python.monte_carlo_control" />
+      <item index="6" class="java.lang.String" itemvalue="Python.q_learning" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.value_iteration" />
-        <item index="1" class="java.lang.String" itemvalue="Python.monte_carlo_control" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.policy_iteration" />
-        <item index="4" class="java.lang.String" itemvalue="Python.hw1" />
+        <item index="0" class="java.lang.String" itemvalue="Python.q_learning" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.monte_carlo_control" />
+        <item index="3" class="java.lang.String" itemvalue="Python.value_iteration" />
+        <item index="4" class="java.lang.String" itemvalue="Python.policy_iteration" />
       </list>
     </recent_temporary>
   </component>
@@ -363,16 +381,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1856" y="-11" width="1857" height="1092" extended-state="6" />
-    <editor active="true" />
+    <frame x="1984" y="-11" width="1857" height="1092" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5018868" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19183673" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19120654" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -485,16 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW_One/Test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="50" column="24" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HW_One/Q2/policy_evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
@@ -515,10 +522,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HW_One/Test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HW_One/monte_carlo_control.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="22" />
+        <state relative-caret-position="540">
+          <caret line="45" column="69" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="69" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -527,8 +542,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HW_One/q_learning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="46" lean-forward="true" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+        <state relative-caret-position="108">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

@@ -9,14 +9,35 @@ def q_learning(env, alpha=0.5, gamma=0.95, epsilon=0.1, num_episodes=500):
     np.random.seed(42)
 
     for i_episode in range(num_episodes):
-        # epsilon-soft
-        randm_num = np.random.rand()
-        Q_buf = Q[state_id][:]
 
-        if randm_num > epsilon:
-            action = np.argmax(Q_buf)
-        else:
-            action = np.random.randint(env.nA)
+        env.reset()
+        state_id = 0 # how to initialize in general case, where no starting state?
+        num_step = 0
+        done = False
+
+        while not done:
+
+            # epsilon-soft
+            randm_num = np.random.rand()
+
+            if randm_num > epsilon:
+                action = np.argmax(Q[state_id][:])
+            else:
+                action = np.random.randint(env.nA)
+
+            next_state_id, reward, done, info = env.step(action)
+
+            # update Q
+            Q[state_id][action] += alpha*(reward+gamma*np.max(Q[next_state_id][:])-Q[state_id][action])
+
+            state_id = next_state_id
+            num_step += 1
+
+        print("Episode finished after {} timesteps".format(num_step))
+
+    print(Q)
+
+    return Q
 
 
 def main():

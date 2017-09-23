@@ -17,13 +17,16 @@ import numpy as np
 # print(test)
 
 
-# G = np.ones([3,3,3])
-#
+G = np.ones([3,4])
+G[1][0] = 0
+
 # test = np.sum(G[0][0][:])
 #
 # print(G)
 #
 # print(test)
+
+print(np.min(G[1][:]))
 
 
 # state_record = np.empty((0,3))
@@ -43,16 +46,19 @@ import numpy as np
 # print(state_first_visit)
 # print(state_first_visit[:][1][1].shape)
 
-import gym
-env = gym.make('FrozenLake-v0')
-for i_episode in range(20):
-    observation = env.reset()
-    print(observation)
-    for t in range(100):
-        env.render()
-        # print(observation)
-        action = env.action_space.sample()
-        observation, reward, done, info = env.step(action)
-        if done:
-            # print("Episode finished after {} timesteps".format(t+1))
-            break
+
+# import gym
+# env = gym.make('FrozenLake-v0')
+# for i_episode in range(20):
+#     observation = env.reset()
+#     print(observation)
+#     for t in range(100):
+#         env.render()
+#         # print(observation)
+#         action = env.action_space.sample()
+#         observation, reward, done, info = env.step(action)
+#         if done:
+#             # print("Episode finished after {} timesteps".format(t+1))
+#             break
+
+
