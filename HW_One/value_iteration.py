@@ -62,9 +62,11 @@ def value_iteration(env, gamma=0.95, theta=0.0001):
         action_id = A_state[state_id]
         policy[state_id][action_id] = 1
 
-    print(A_state)
-    print_policy(policy)
-    print(Q)
+    # print(A_state)
+    # print_policy(policy)
+    # print(Q)
+
+    print(policy)
 
     return policy
 

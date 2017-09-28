@@ -21,7 +21,20 @@ def q_learning(env, alpha=0.5, gamma=0.95, epsilon=0.1, num_episodes=500):
             randm_num = np.random.rand()
 
             if randm_num > epsilon:
+                equal_num = 0
+                action_candidates = np.zeros(env.nA, dtype=int)
                 action = np.argmax(Q[state_id][:])
+                action_candidates[equal_num] = action
+                equal_num += 1
+
+                for action_choice_id in range(env.nA):
+                    if Q[state_id][action_choice_id] == Q[state_id][action] and action_choice_id != action:
+                        action_candidates[equal_num] = action_choice_id
+                        equal_num += 1
+
+                if equal_num > 1:
+                    rand_action = np.random.randint(0, equal_num - 1)
+                    action = action_candidates[rand_action]
             else:
                 action = np.random.randint(env.nA)
 

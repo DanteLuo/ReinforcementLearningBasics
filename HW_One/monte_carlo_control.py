@@ -26,7 +26,20 @@ def monte_carlo(env, gamma=0.95, epsilon=0.1, num_episodes=5000):
             randm_num = np.random.rand()
 
             if randm_num > epsilon:
+                equal_num = 0
+                action_candidates = np.zeros(env.nA, dtype=int)
                 action = np.argmax(Q[state_id][:])
+                action_candidates[equal_num] = action
+                equal_num += 1
+
+                for action_choice_id in range(env.nA):
+                    if Q[state_id][action_choice_id] == Q[state_id][action] and action_choice_id != action:
+                        action_candidates[equal_num] = action_choice_id
+                        equal_num += 1
+
+                if equal_num > 1:
+                    rand_action = np.random.randint(0, equal_num - 1)
+                    action = action_candidates[rand_action]
             else:
                 action = np.random.randint(env.nA)
 
@@ -61,14 +74,22 @@ def monte_carlo(env, gamma=0.95, epsilon=0.1, num_episodes=5000):
             Returns_buf = Returns[state_id][action_id]
             num_apperance = N[state_id][action_id]
 
-            if num_apperance == 0:
-                print("Bad!")
-
             Q[state_id][action_id] = Returns_buf/num_apperance
 
     print(Q)
 
-    return Q
+    policy = np.zeros([env.nS,env.nA])
+    for state_id in range(env.nS):
+        for action_id in range(env.nA):
+            opt_action = np.argmax(Q[state_id][:])
+            if action_id == opt_action:
+                policy[state_id][action_id] = 1-epsilon+epsilon/env.nA
+            else:
+                policy[state_id][action_id] = epsilon/env.nA
+
+    print(policy)
+
+    return Q,policy
 
 
 def main():

@@ -17,8 +17,8 @@ import numpy as np
 # print(test)
 
 
-G = np.ones([3,4])
-G[1][0] = 0
+# G = np.ones([3,4])
+# G[1][0] = 0
 
 # test = np.sum(G[0][0][:])
 #
@@ -26,7 +26,7 @@ G[1][0] = 0
 #
 # print(test)
 
-print(np.min(G[1][:]))
+# print(np.min(G[1][:]))
 
 
 # state_record = np.empty((0,3))
@@ -61,4 +61,5 @@ print(np.min(G[1][:]))
 #             # print("Episode finished after {} timesteps".format(t+1))
 #             break
 
-
+for i in range(50):
+    print(np.random.uniform(0.0,3.0,1))

@@ -52,7 +52,6 @@ def print_value_function(v):
 
 
 env = gym.make('FrozenLake-v0').unwrapped
-env.render()
 policy = np.ones([env.nS,env.nA])/env.nA
 policy_evaluation(policy,env)
 

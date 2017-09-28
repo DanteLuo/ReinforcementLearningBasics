@@ -1,6 +1,6 @@
 import gym
 import numpy as np
-from hw1 import policy_evaluation
+from hw1 import policy_evaluation_PI
 from value_iteration import print_value_function, print_policy
 
 
@@ -27,14 +27,22 @@ def policy_iteration(env, gamma=0.95):
     V = np.zeros(env.nS)
     is_policy_stable = False
 
-    while is_policy_stable == False:
+    while not is_policy_stable:
 
-        V, A_state = policy_evaluation(policy,env,gamma,theta)
+        V, A_state = policy_evaluation_PI(policy,env,gamma,theta)
 
         policy, is_policy_stable = policy_improvement(policy,V,A_state,env)
 
-    print_value_function(V)
-    print_policy(policy)
+    for state_id in range(env.nS):
+        action = np.argmax(policy[state_id][:])
+        policy[state_id][:] = 0
+        policy[state_id][action] = 1
+
+    # print_value_function(V)
+    # print_policy(policy)
+    # print(policy)
+
+    print(policy)
 
     return policy
 
