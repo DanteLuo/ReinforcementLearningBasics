@@ -1,4 +1,6 @@
 import numpy as np
+from queue import PriorityQueue
+import matplotlib.pyplot as plt
 
 # test = {}
 #
@@ -61,5 +63,89 @@ import numpy as np
 #             # print("Episode finished after {} timesteps".format(t+1))
 #             break
 
-for i in range(50):
-    print(np.random.uniform(0.0,3.0,1))
+# for i in range(50):
+#     print(np.random.uniform(0.0,3.0,1))
+
+# Q = np.zeros([16,4])
+# # for i in range(16):
+# #     print(np.max(Q[i][:]))
+#
+# # print(Q[:][4])
+# state_id = 4
+# action_set = np.argwhere(Q[state_id][:] == np.max(Q[state_id][:]))
+#
+# print(action_set)
+
+# testdict = {}
+# testdict[(1,2)] = [{},20]
+# testdict[(1,2)][0][1] = (1,2)
+
+# print(testdict[(1,2)][0][1][1])
+
+# print(len(list(testdict)))
+
+# for i in range(100):
+#     print(np.random.randint(10))
+
+# if list(testdict)[0] == 1:
+#     print('yes!')
+
+# for i in list(testdict):
+#     print(i[0])
+
+# kap = None
+# if kap:
+#     print('no.')
+# else:
+#     print('yes!')
+
+# myqueue = PriorityQueue()
+# myqueue.put(((3,1),(4,2)))
+# myqueue.put(((1,3),(2,2)))
+#
+# print(myqueue.get())
+# print(myqueue.qsize())
+# print(myqueue.get())
+# print(myqueue.qsize())
+
+
+# N = np.zeros([3,3,2])
+# N[1][2][:] = 1
+# print(N[1][:][:])
+# print(N)
+
+# test = {}
+#
+# test[1] = [{},1]
+#
+# if test[1][0][1]:
+#     print('yes!')
+# else:
+#     print('no!')
+
+# test = np.zeros(100)
+# test2 = np.zeros(200)
+# test3 = []
+# test3 = np.concatenate((test,test2))
+#
+# print(test2-1)
+
+# plt.plot(3000*np.ones(20),np.linspace(-120,10,20),'g--')
+# plt.show()
+
+# class test:
+#     def __init__(self,ns,na):
+#         self.ns = ns
+#         self.na = na
+#
+#
+# test_set = test(4,4)
+# print(test_set.ns)
+
+model = [[ 1,  0,  0,  0, 0],
+         [ 0, -1,  0, -1, 0],
+         [ 0,  0,  0,  0, 0],
+         [ 0,  0, -1, -1, 0],
+         [ 0,  0,  0,  0, 2]]
+
+print(model[3][2])

@@ -8,5 +8,5 @@ register(
 
 register(
     id="FrozenLakeLargeShiftedIce-v0",
-    entry_point="frozen_lakes.lake_envsFrozenLakeLargeShiftedIceEnv",
+    entry_point="frozen_lakes.lake_envs:FrozenLakeLargeShiftedIceEnv",
 )
