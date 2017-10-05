@@ -59,8 +59,8 @@ def dyna_q_learning(env, num_episodes=30, num_planning=50, epsilon=0.1,
                     reward_old = env_model[(state_id,action)][0][next_state_id][1]  # the reward record
                     env_model[(state_id,action)][0][next_state_id][0] += 1
                     # average the reward getting
-                    env_model[(state_id,action)][0][next_state_id][1] = (N_next_state*reward_old + reward)\
-                                                                        /(N_next_state+1)
+                    env_model[(state_id,action)][0][next_state_id][1] = float(N_next_state*reward_old + reward)\
+                                                                        /float(N_next_state+1)
 
             # model planning
             for i_planning in range(num_planning):
@@ -78,7 +78,7 @@ def dyna_q_learning(env, num_episodes=30, num_planning=50, epsilon=0.1,
                 # Q(S,A) -= alpha(expected_Q-Q)
                 expected_Q = 0
                 for next_state_id_planning in next_state_set:
-                    state_transition_prob = state_transition[next_state_id_planning][0]/N_S_A
+                    state_transition_prob = float(state_transition[next_state_id_planning][0])/float(N_S_A)
                     reward_planning = state_transition[next_state_id_planning][1]
                     if kappa:
                         reward_planning += kappa*np.sqrt(delta_time)
@@ -170,8 +170,8 @@ def dyna_q_learning_comp_helper(env_one, env_two, num_timesteps=6000, num_planni
                         reward_old = env_model[(state_id,action)][0][next_state_id][1]  # the reward record
                         env_model[(state_id,action)][0][next_state_id][0] += 1
                         # average the reward getting
-                        env_model[(state_id,action)][0][next_state_id][1] = (N_next_state*reward_old + reward)\
-                                                                            /(N_next_state+1)
+                        env_model[(state_id,action)][0][next_state_id][1] = float(N_next_state*reward_old + reward)\
+                                                                            /float(N_next_state+1)
 
                 # model planning
                 for i_planning in range(int(num_planning)):
@@ -189,7 +189,7 @@ def dyna_q_learning_comp_helper(env_one, env_two, num_timesteps=6000, num_planni
                     # Q(S,A) -= alpha(expected_Q-Q)
                     expected_Q = 0
                     for next_state_id_planning in next_state_set:
-                        state_transition_prob = state_transition[next_state_id_planning][0]/N_S_A
+                        state_transition_prob = float(state_transition[next_state_id_planning][0])/float(N_S_A)
                         reward_planning = state_transition[next_state_id_planning][1]
                         if kappa:
                             reward_planning += kappa*np.sqrt(delta_time)
@@ -225,17 +225,16 @@ def dyna_q_learning_comp(env, env_two, num_averaged = 10, num_timesteps=6000, nu
 
         # run dynaq
         avg_accumulative_reward_dynaq_buf = dyna_q_learning_comp_helper(env, env_two, num_timesteps,
-                                                                    num_planning, epsilon,
-                                                                    alpha, gamma)
+                                                                        num_planning, epsilon,
+                                                                        alpha, gamma)
         avg_accumulative_reward_dynaq = (avg_accumulative_reward_dynaq*i_num_averaged
-                                         +avg_accumulative_reward_dynaq_buf)/(i_num_averaged+1)
+                                         + avg_accumulative_reward_dynaq_buf)/(i_num_averaged+1)
 
         # run dynaq+
         avg_accumulative_reward_dynaqp_buf = dyna_q_learning_comp_helper(env, env_two, num_timesteps,
-                                                                     num_planning, epsilon, alpha, gamma, kappa)
+                                                                         num_planning, epsilon, alpha, gamma, kappa)
         avg_accumulative_reward_dynaqp = (avg_accumulative_reward_dynaqp * i_num_averaged
-                                         + avg_accumulative_reward_dynaqp_buf) / (i_num_averaged + 1)
-
+                                          + avg_accumulative_reward_dynaqp_buf) / (i_num_averaged + 1)
 
     plt.plot(range(num_timesteps), avg_accumulative_reward_dynaq,'r')
     plt.plot(range(num_timesteps), avg_accumulative_reward_dynaqp,'b')
@@ -255,11 +254,13 @@ def prioritized_sweeping(env, num_episodes=30, num_planning=50, epsilon=0.1,
     accumulative_reward_record = np.zeros(num_episodes*20)
     accumulative_reward = 0
     PQueue = PriorityQueue()
+    # track whether the state-action pair is already in the PQueue
+    state_action_PQueue = np.zeros([env.nS,env.nA])
     total_num_step = 0
     # for breaking tie by preferring the oldest one
     num_PQueue = 0
-    np.random.seed(22)
-    env.seed(22)
+    np.random.seed(42)
+    env.seed(42)
 
     for i_episode in range(num_episodes):
 
@@ -284,9 +285,10 @@ def prioritized_sweeping(env, num_episodes=30, num_planning=50, epsilon=0.1,
 
             # update PQueue
             P = abs(reward + gamma * np.max(Q[next_state_id][:]) - Q[state_id][action])
-            if P > theta:
+            if P > theta and state_action_PQueue[state_id][action] == 0:
                 PQueue.put(((-P,num_PQueue),(state_id,action)))
                 num_PQueue += 1
+                state_action_PQueue[state_id,action] = 1
 
             accumulative_reward += reward
             if total_num_step < num_episodes*20:
@@ -306,8 +308,8 @@ def prioritized_sweeping(env, num_episodes=30, num_planning=50, epsilon=0.1,
                     reward_old = env_model[(state_id, action)][0][next_state_id][1]  # the reward record
                     env_model[(state_id, action)][0][next_state_id][0] += 1
                     # average the reward getting
-                    env_model[(state_id, action)][0][next_state_id][1] = (N_next_state * reward_old + reward)\
-                                                                         /(N_next_state + 1)
+                    env_model[(state_id, action)][0][next_state_id][1] = float(N_next_state * reward_old + reward)\
+                                                                         /float(N_next_state + 1)
 
             # model planning
             num_of_planning_steps = num_planning
@@ -315,6 +317,7 @@ def prioritized_sweeping(env, num_episodes=30, num_planning=50, epsilon=0.1,
                 state_action_id_planning = PQueue.get()[1]
                 state_id_planning = state_action_id_planning[0]
                 action_planning = state_action_id_planning[1]
+                state_action_PQueue[state_id_planning][action_planning] = 0
 
                 # number of visit of (S,A)
                 N_S_A = env_model[state_action_id_planning][1]
@@ -325,25 +328,12 @@ def prioritized_sweeping(env, num_episodes=30, num_planning=50, epsilon=0.1,
                 # Q(S,A) -= alpha(expected_Q-Q)
                 expected_Q = 0
                 for next_state_id_planning in next_state_set:
-                    state_transition_prob = state_transition[next_state_id_planning][0] / N_S_A
+                    state_transition_prob = float(state_transition[next_state_id_planning][0]) / float(N_S_A)
                     reward_planning = state_transition[next_state_id_planning][1]
                     Q_planning = np.max(Q[next_state_id_planning][:])
                     expected_Q += state_transition_prob * (reward_planning + gamma * Q_planning)
 
                 Q[state_id_planning][action_planning] += alpha * (expected_Q - Q[state_id_planning][action_planning])
-
-                # update PQueue who leads to current state
-                # for predictor_state in range(env.nS):
-                #     for predictor_action in range(env.nA):
-                #         if state_predictor[state_id_planning][predictor_state][predictor_action]:
-                #             N_PQ = env_model[(predictor_state,predictor_action)][1]
-                #             N_state_PQ = env_model[(predictor_state,predictor_action)][0][state_id_planning][0]
-                #             reward_PQ = env_model[(predictor_state,predictor_action)][0][state_id_planning][1]
-                #             Q_PQ = np.max(Q[state_id_planning][:])
-                #             state_transition_prob = N_state_PQ/N_PQ
-                #             P = abs(state_transition_prob*(reward_PQ+gamma*Q_PQ)-Q[predictor_state][predictor_action])
-                #             if P > theta:
-                #                 PQueue.put((-P,(predictor_state,predictor_action)))
 
                 for state_action_predictor in list(env_model):
                     if state_id_planning in list(env_model[state_action_predictor][0]):
@@ -353,11 +343,13 @@ def prioritized_sweeping(env, num_episodes=30, num_planning=50, epsilon=0.1,
                         N_state_PQ = env_model[state_action_predictor][0][state_id_planning][0]
                         reward_PQ = env_model[state_action_predictor][0][state_id_planning][1]
                         Q_PQ = np.max(Q[state_id_planning][:])
-                        state_transition_prob = N_state_PQ/N_PQ
+                        state_transition_prob = float(N_state_PQ)/float(N_PQ)
                         P = abs(state_transition_prob*(reward_PQ+gamma*Q_PQ)-Q[state_PQ][action_PQ])
-                        if P > theta:
+
+                        if P > theta and state_action_PQueue[state_PQ,action_PQ] == 0:
                             PQueue.put(((-P,num_PQueue), (state_PQ, action_PQ)))
                             num_PQueue += 1
+                            state_action_PQueue[state_PQ,action_PQ] = 1
 
                 num_of_planning_steps -= 1
 
@@ -398,21 +390,21 @@ def main():
 
     env = gym.make('FrozenLakeLarge-v0').unwrapped
 
-    # Q1
-    if question == 1 or question == 5:
-        policy_one = dyna_q_learning(env,num_episodes=350,kappa=None)
-
-    if question == 2 or question == 5:
-        policy_two = dyna_q_learning(env,num_episodes=350,kappa=.0001)
-
-    # Q2
-    if question == 3 or question == 5:
-        env_two = gym.make('FrozenLakeLargeShiftedIce-v0').unwrapped
-        dyna_q_learning_comp(env,env_two,num_averaged=10,kappa=0.001)
+    # # Q1
+    # if question == 1 or question == 5:
+    #     policy_one = dyna_q_learning(env,num_episodes=350,kappa=None)
+    #
+    # if question == 2 or question == 5:
+    #     policy_two = dyna_q_learning(env,num_episodes=350,kappa=.0001)
+    #
+    # # Q2
+    # if question == 3 or question == 5:
+    #     env_two = gym.make('FrozenLakeLargeShiftedIce-v0').unwrapped
+    #     dyna_q_learning_comp(env,env_two,num_averaged=10,kappa=0.001)
 
     # Q3
-    if question == 4 or question == 5:
-        policy_three = prioritized_sweeping(env,num_episodes=400,theta=0.1)
+    # if question == 4 or question == 5:
+    policy_three = prioritized_sweeping(env,num_episodes=300,theta=0.1)
 
 
 if __name__ == '__main__':

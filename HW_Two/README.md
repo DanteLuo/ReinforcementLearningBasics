@@ -14,10 +14,10 @@ OPENAI Gym FrozenLake Environment
 
 1. First, install all the requirements in terminal by pip:
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
-2. Second, download the modified environment from canvas.
+2. Second, download2 the modified environment from canvas.
 3. Third, open terminal and run:
 ``` 
 python3.X hw2.py -q Y
@@ -30,3 +30,9 @@ python3.X hw2.py -h
 ```
 
 PS: If you would like to change the hyperparameters please check hw2.py
+
+
+## Test case:
+
+I've wrote a test case with 5x5 environment. To run the test case,
+run the hw_test.py file
