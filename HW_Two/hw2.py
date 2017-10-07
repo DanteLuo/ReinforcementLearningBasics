@@ -285,7 +285,8 @@ def prioritized_sweeping(env, num_episodes=30, num_planning=50, epsilon=0.1,
 
             # update PQueue
             P = abs(reward + gamma * np.max(Q[next_state_id][:]) - Q[state_id][action])
-            if P > theta and state_action_PQueue[state_id][action] == 0:
+            if P > theta:
+                    # and state_action_PQueue[state_id][action] == 0:
                 PQueue.put(((-P,num_PQueue),(state_id,action)))
                 num_PQueue += 1
                 state_action_PQueue[state_id,action] = 1
@@ -346,7 +347,8 @@ def prioritized_sweeping(env, num_episodes=30, num_planning=50, epsilon=0.1,
                         state_transition_prob = float(N_state_PQ)/float(N_PQ)
                         P = abs(state_transition_prob*(reward_PQ+gamma*Q_PQ)-Q[state_PQ][action_PQ])
 
-                        if P > theta and state_action_PQueue[state_PQ,action_PQ] == 0:
+                        if P > theta:
+                                # and state_action_PQueue[state_PQ,action_PQ] == 0:
                             PQueue.put(((-P,num_PQueue), (state_PQ, action_PQ)))
                             num_PQueue += 1
                             state_action_PQueue[state_PQ,action_PQ] = 1
@@ -390,7 +392,7 @@ def main():
 
     env = gym.make('FrozenLakeLarge-v0').unwrapped
 
-    # # Q1
+    # Q1
     # if question == 1 or question == 5:
     #     policy_one = dyna_q_learning(env,num_episodes=350,kappa=None)
     #
@@ -401,10 +403,10 @@ def main():
     # if question == 3 or question == 5:
     #     env_two = gym.make('FrozenLakeLargeShiftedIce-v0').unwrapped
     #     dyna_q_learning_comp(env,env_two,num_averaged=10,kappa=0.001)
-
-    # Q3
+    #
+    # # Q3
     # if question == 4 or question == 5:
-    policy_three = prioritized_sweeping(env,num_episodes=300,theta=0.1)
+    policy_three = prioritized_sweeping(env,num_episodes=300,theta=0.01)
 
 
 if __name__ == '__main__':
