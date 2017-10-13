@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6aee6721-e84e-49ed-9f8e-52bcbf6fce2d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Basic RL Algorithms/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Basic RL Algorithms/requirements.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HW_One/q1.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW_One/Q2/policy_evaluation.py" afterPath="$PROJECT_DIR$/Basic RL Algorithms/policy_evaluation.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW_One/Test.py" afterPath="$PROJECT_DIR$/Basic RL Algorithms/Test.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW_One/hw1.py" afterPath="$PROJECT_DIR$/Basic RL Algorithms/Mixture_RL.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW_One/monte_carlo_control.py" afterPath="$PROJECT_DIR$/Basic RL Algorithms/monte_carlo_control.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW_One/multiarm_bandit.py" afterPath="$PROJECT_DIR$/Basic RL Algorithms/multiarm_bandit.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW_One/policy_iteration.py" afterPath="$PROJECT_DIR$/Basic RL Algorithms/policy_iteration.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW_One/q_learning.py" afterPath="$PROJECT_DIR$/Basic RL Algorithms/q_learning.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW_One/value_iteration.py" afterPath="$PROJECT_DIR$/Basic RL Algorithms/value_iteration.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/HW_Two/README.md" afterPath="$PROJECT_DIR$/ModelBased RL/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/HW_Two/frozen_lakes/__init__.py" afterPath="$PROJECT_DIR$/ModelBased RL/frozen_lakes/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/HW_Two/frozen_lakes/lake_envs.py" afterPath="$PROJECT_DIR$/ModelBased RL/frozen_lakes/lake_envs.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/HW_Two/hw2.py" afterPath="$PROJECT_DIR$/ModelBased RL/ModelBasedRL.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/HW_Two/hw2_tests.py" afterPath="$PROJECT_DIR$/ModelBased RL/SimpleTestCase.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/HW_Two/requirements.txt" afterPath="$PROJECT_DIR$/ModelBased RL/requirements.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/HW_Two/ztluo.zip" afterPath="$PROJECT_DIR$/ModelBased RL/ztluo.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW_Two/hw2.py" afterPath="$PROJECT_DIR$/HW_Two/hw2.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,21 +34,7 @@
     <SUITE FILE_PATH="coverage/RL$hw1.coverage" NAME="hw1 Coverage Results" MODIFIED="1506477017207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW_One" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Basic RL Algorithms/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="468">
-                <caret line="26" column="26" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -87,6 +68,7 @@
       <find>env.</find>
       <find>print</find>
       <find>/</find>
+      <find>plt</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,10 +108,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1985" />
-    <option name="y" value="-4" />
-    <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="x" value="1984" />
+    <option name="y" value="-11" />
+    <option name="width" value="1857" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -147,7 +129,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,16 +136,12 @@
               <item name="RL" type="b2602c69:ProjectViewProjectNode" />
               <item name="RL" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="RL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RL" type="462c0819:PsiDirectoryNode" />
-              <item name="Basic RL Algorithms" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,9 +333,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1985" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24690028" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24690028" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5018868" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -644,39 +620,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Basic RL Algorithms/value_iteration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="66" column="14" lean-forward="false" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python35/site-packages/gym/core.py" />
-    <entry file="file://$PROJECT_DIR$/Basic RL Algorithms/q_learning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW_One/q1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/HW_One/q1.py" />
     <entry file="file://$PROJECT_DIR$/Basic RL Algorithms/monte_carlo_control.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53">
           <caret line="4" column="63" lean-forward="false" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Basic RL Algorithms/multiarm_bandit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="15" column="14" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="15" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -694,63 +643,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW_Two/hw2_tests.py">
+    <entry file="file://$PROJECT_DIR$/ModelBased RL/SimpleTestCase.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1152">
           <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW_Two/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="342">
-            <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW_Two/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/ModelBased RL/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW_Two/frozen_lakes/lake_envs.py">
+    <entry file="file://$PROJECT_DIR$/ModelBased RL/frozen_lakes/lake_envs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW_Two/hw2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5266">
-          <caret line="408" column="70" lean-forward="false" selection-start-line="408" selection-start-column="70" selection-end-line="408" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Basic RL Algorithms/Mixture_RL.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -758,7 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -767,9 +676,64 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="468">
             <caret line="26" column="26" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Basic RL Algorithms/value_iteration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1206">
+          <caret line="68" column="5" lean-forward="false" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Basic RL Algorithms/multiarm_bandit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="14" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Basic RL Algorithms/q_learning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Basic RL Algorithms/Mixture_RL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ModelBased RL/ModelBasedRL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="408" column="70" lean-forward="false" selection-start-line="408" selection-start-column="70" selection-end-line="408" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ModelBased RL/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="342">
+            <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
